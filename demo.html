@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Buffer.js</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <div class="container mt-5">
+
+            <h2>Buffer.js demo</h2>
+            <p>You can start typing to try it out.<br>The callback function will be called after 1 second (<code>buffer-js-delay</code>) of no events in the input box.</p>
+            <input type="text" class="form-control col-4" name="username" buffer-js buffer-js-delay="1" buffer-js-callback="callbackFunc">
+    
+            <div class="mt-5">
+                A short breakdown of the code:<br>
+                <xmp><input type="text" name="username" buffer-js buffer-js-delay="1" buffer-js-callback="callbackFunc"></xmp>
+    
+                <div class="mt-4">
+                    <code class="mr-1">buffer-js</code> this initiates Buffer.js on said input.<br>
+                    <code class="mr-1">buffer-js-delay="1"</code> this sets the buffer (time that needs to expire before the callback is called) to 1 second<br>
+                    <code class="mr-1">buffer-js-callback="callbackFunc"</code> this tells Buffer.js that it needs to call function <b>callbackFunc()</b> after the buffer expires.<br>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+        <script src="src/buffer.min.js"></script>
+        <script>
+            function callbackFunc () {
+                alert("This is the callback function");
+            }
+        </script>
+
+    </body>
+</html>
