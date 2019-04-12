@@ -6,7 +6,7 @@ A basic usage example of using Buffer.js is:
 
 `<input type="text" name="username" buffer-js buffer-js-delay="1" buffer-js-callback="callbackFunc">`
 
-This will: execute **callbackFunc()** after 1 second.
+This will: tell Buffer.js to execute **callbackFunc()** after 1 second.
 
 # Breakdown
 
